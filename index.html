@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>學習風格線上測驗</title>
+<style>
+  body {
+    font-family: "Noto Sans TC", sans-serif;
+    background: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 2rem;
+  }
+  h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  .question {
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  label {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+  }
+  button {
+    display: block;
+    margin: 1.5rem auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #005ea3;
+  }
+  .result {
+    background: #ffffff;
+    border-left: 6px solid #0078D7;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+
+<h1>🎯 學習風格線上測驗</h1>
+<p style="text-align:center;">請選出最符合您的選項，每題僅選一項。</p>
+
+<form id="quizForm">
+
+  <!-- 問題區 -->
+  <div class="question">
+    <p>1. 在學習新知識時，您更喜歡：</p>
+    <label><input type="radio" name="q1" value="a"> a) 聽講座或課堂上的講師講解。</label>
+    <label><input type="radio" name="q1" value="b"> b) 觀看圖片、圖表或視頻來理解概念。</label>
+    <label><input type="radio" name="q1" value="c"> c) 閱讀書本、筆記或文章以獲取信息。</label>
+    <label><input type="radio" name="q1" value="d"> d) 透過實際操作和動手實踐來學習。</label>
+  </div>
+
+  <div class="question">
+    <p>2. 您在記憶事物時，更容易記住：</p>
+    <label><input type="radio" name="q2" value="a"> a) 聽到某人的聲音或故事。</label>
+    <label><input type="radio" name="q2" value="b"> b) 看到圖像或圖表。</label>
+    <label><input type="radio" name="q2" value="c"> c) 閱讀文字或句子。</label>
+    <label><input type="radio" name="q2" value="d"> d) 進行實際操作或運動。</label>
+  </div>
+
+  <div class="question">
+    <p>3. 在解決問題時，您更傾向於：</p>
+    <label><input type="radio" name="q3" value="a"> a) 與他人進行討論和交流。</label>
+    <label><input type="radio" name="q3" value="b"> b) 進行視覺分析和圖像辨識。</label>
+    <label><input type="radio" name="q3" value="c"> c) 進行閱讀和文本分析。</label>
+    <label><input type="radio" name="q3" value="d"> d) 通過實際操作和試驗錯誤進行。</label>
+  </div>
+
+  <div class="question">
+    <p>4. 您在記錄筆記時，更喜歡使用：</p>
+    <label><input type="radio" name="q4" value="a"> a) 音頻錄音或口述筆記。</label>
+    <label><input type="radio" name="q4" value="b"> b) 圖表、圖像或示意圖。</label>
+    <label><input type="radio" name="q4" value="c"> c) 文字和句子的寫作。</label>
+    <label><input type="radio" name="q4" value="d"> d) 手寫或手動繪圖。</label>
+  </div>
+
+  <div class="question">
+    <p>5. 您在準備考試時，更喜歡使用：</p>
+    <label><input type="radio" name="q5" value="a"> a) 聽錄音或口頭測試。</label>
+    <label><input type="radio" name="q5" value="b"> b) 觀看圖表、圖像或示意圖的測試。</label>
+    <label><input type="radio" name="q5" value="c"> c) 閱讀書面資料的測試。</label>
+    <label><input type="radio" name="q5" value="d"> d) 進行實際操作或演示的測試。</label>
+  </div>
+
+  <div class="question">
+    <p>6. 在上課時，您更喜歡：</p>
+    <label><input type="radio" name="q6" value="a"> a) 聆聽講師的講課。</label>
+    <label><input type="radio" name="q6" value="b"> b) 觀看投影片、視頻或演示。</label>
+    <label><input type="radio" name="q6" value="c"> c) 閱讀教科書或教材。</label>
+    <label><input type="radio" name="q6" value="d"> d) 參與實際活動或實驗。</label>
+  </div>
+
+  <div class="question">
+    <p>7. 學習新技能時，您更傾向於：</p>
+    <label><input type="radio" name="q7" value="a"> a) 聽取專家的建議和指導。</label>
+    <label><input type="radio" name="q7" value="b"> b) 觀看示範或教學視頻。</label>
+    <label><input type="radio" name="q7" value="c"> c) 閱讀技術手冊或指南。</label>
+    <label><input type="radio" name="q7" value="d"> d) 進行實際操作和練習。</label>
+  </div>
+
+  <div class="question">
+    <p>8. 當您需要理解複雜概念時，您會：</p>
+    <label><input type="radio" name="q8" value="a"> a) 與別人談論並聽對方的解釋。</label>
+    <label><input type="radio" name="q8" value="b"> b) 畫出示意圖或流程圖幫助理解。</label>
+    <label><input type="radio" name="q8" value="c"> c) 閱讀並重新整理筆記。</label>
+    <label><input type="radio" name="q8" value="d"> d) 嘗試透過實際應用或例子去體會。</label>
+  </div>
+
+  <div class="question">
+    <p>9. 在空閒時間學習新事物時，您通常會：</p>
+    <label><input type="radio" name="q9" value="a"> a) 聽播客、演講或課程音檔。</label>
+    <label><input type="radio" name="q9" value="b"> b) 看影片、圖片或展示內容。</label>
+    <label><input type="radio" name="q9" value="c"> c) 閱讀文章、報導或書籍。</label>
+    <label><input type="radio" name="q9" value="d"> d) 親自嘗試、動手操作或參加活動。</label>
+  </div>
+
+  <div class="question">
+    <p>10. 當別人向您解釋某個步驟時，您會希望他：</p>
+    <label><input type="radio" name="q10" value="a"> a) 用口頭方式一步步講解。</label>
+    <label><input type="radio" name="q10" value="b"> b) 給您看一張圖或影片。</label>
+    <label><input type="radio" name="q10" value="c"> c) 寫下文字說明給您。</label>
+    <label><input type="radio" name="q10" value="d"> d) 直接示範讓您模仿。</label>
+  </div>
+
+  <button type="button" onclick="calculateResult()">提交測驗</button>
+</form>
+
+<div id="result" class="result" style="display:none;"></div>
+
+<script>
+function calculateResult() {
+  const form = document.forms['quizForm'];
+  const counts = {a:0, b:0, c:0, d:0};
+
+  for (let i = 1; i <= 10; i++) {
+    const value = form['q' + i].value;
+    if (value) counts[value]++;
+    else {
+      alert('請完成所有題目再提交！');
+      return;
+    }
+  }
+
+  const maxKey = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
+  let resultText = '';
+
+  if (maxKey === 'a') {
+    resultText = `<h2>🎧 您是：聽覺型學習者（Auditory）</h2>
+    <p>您透過聆聽學得最快。適合課堂講解、討論或錄音學習。你可以錄音並重複聆聽講座或課堂內容，以幫助自己更好地理解和記憶。此外，與他人進行口頭交流和討論，可以加強對主題的理解和記憶。還可以將學習材料轉化為聲音形式，例如透過朗讀、錄音或使用語音筆記工具，以提升學習效果。</p>`;
+  } else if (maxKey === 'b') {
+    resultText = `<h2>👁️‍🗨️ 您是：視覺型學習者（Visual）</h2>
+    <p>您透過觀看圖像、影片或圖表學習最有效。可以利用筆記和圖表整理學習材料，以幫助自己更好地組織和記憶重要內容。此外，使用視覺化工具和資源，例如心智圖、圖像和影片，可以增強他們對主題的理解和記憶。視覺型學習者還可以利用圖表和圖像來創造關聯和聯想，以提升學習效果。</p>`;
+  } else if (maxKey === 'c') {
+    resultText = `<h2>📖 您是：閱讀型學習者（Reading）</h2>
+    <p>您喜歡透過文字閱讀與書寫整理筆記學習。可以利用筆記和摘要整理閱讀材料，以幫助自己記錄和概括重要內容。此外，他們可以透過閱讀和反覆研讀來加強對主題的理解和記憶。閱讀型學習者還可以將學習材料轉化為書面形式，例如透過撰寫筆記、記事或文章來強化學習效果。e</p>`;
+  } else if (maxKey === 'd') {
+    resultText = `<h2>✋ 您是：觸覺型學習者（Kinesthetic）</h2>
+    <p>您偏好動手操作、親身體驗的學習方式。可以利用實際操作和實踐來學習新的技能和概念。觸覺型學習者可以透過實地考察、實驗室實驗和模擬演練來加強對主題的理解和記憶。此外，他們可以透過參與互動和實際應用來將學習內容轉化為實際技能。</p>`;
+  }
+
+  document.getElementById('result').innerHTML = resultText;
+  document.getElementById('result').style.display = 'block';
+  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
